@@ -26,7 +26,6 @@
             line-height: 1.6;
         }
 
-        /* Navigation Bar - Addresses "Navigation & Structure" */
         nav {
             background: var(--primary-navy);
             padding: 1rem 0;
@@ -48,7 +47,6 @@
             font-weight: 500;
             font-size: 0.9rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
         nav a:hover { color: var(--accent-blue); }
 
@@ -61,7 +59,6 @@
             border-radius: 4px;
         }
 
-        /* Header - Professional Branding */
         header {
             display: flex;
             align-items: center;
@@ -73,7 +70,7 @@
         .profile-img {
             width: 160px;
             height: 160px;
-            border-radius: 4px; 
+            border-radius: 4px;
             object-fit: cover;
             border: 1px solid var(--border-color);
         }
@@ -82,7 +79,6 @@
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.85rem; }
         .contact-grid a { color: var(--accent-blue); text-decoration: none; }
 
-        /* Section Headings */
         h2 { 
             color: var(--primary-navy); 
             font-size: 1.6rem; 
@@ -91,7 +87,6 @@
             margin-top: 50px;
         }
 
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -99,9 +94,7 @@
             margin-top: 20px;
         }
         .skill-category h4 { margin: 0 0 10px 0; color: var(--accent-blue); font-size: 1.1rem; }
-        .skill-category ul { padding-left: 20px; margin: 0; font-size: 0.95rem; }
 
-        /* Work Experience */
         .experience-item { margin-bottom: 35px; }
         .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
         .exp-title { font-weight: 700; font-size: 1.1rem; color: var(--primary-navy); }
@@ -117,7 +110,6 @@
             margin-top: 10px;
         }
 
-        /* Reflection Sections - Fixing the 0/4 grade */
         .reflection-box {
             background: var(--reflection-bg);
             border-left: 4px solid #f1c40f;
@@ -127,7 +119,6 @@
         }
         .reflection-box strong { display: block; margin-bottom: 8px; color: #856404; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
-        /* Project Buttons */
         .btn {
             display: inline-block;
             background: var(--primary-navy);
@@ -213,8 +204,13 @@
                 <span class="exp-title">Data Analyst | National Bureau of Statistics</span>
                 <span class="exp-date">2016 – 2018</span>
             </div>
-            <p>Managed state-level demographic and economic data processing for quarterly statistical abstracts and national bulletins.</p>
-            <div class="outcome-highlight">Key Outcome: Automated complex reporting templates, reducing monthly preparation time by 40%.</div>
+            <ul>
+                <li>Led data cleaning and validation processes for multi-sectoral demographic surveys.</li>
+                <li>Utilized SPSS and R to conduct correlation analysis and trend forecasting for national bulletins.</li>
+                <li>Collaborated with government ministries to translate complex statistical abstracts into executive summaries.</li>
+                <li>Monitored field data collection to ensure strict adherence to quality control protocols.</li>
+            </ul>
+            <div class="outcome-highlight">Key Outcome: Automated complex reporting templates using Excel VBA, reducing monthly preparation time by 40%.</div>
         </div>
 
         <div class="experience-item">
@@ -222,8 +218,13 @@
                 <span class="exp-title">Data Analyst | Nigerian College of Aviation Technology</span>
                 <span class="exp-date">2015 – 2016</span>
             </div>
-            <p>Designed and maintained a centralized student performance tracking system for five academic departments.</p>
-            <div class="outcome-highlight">Key Outcome: Identified and mitigated systematic data entry errors by 35% through new validation protocols.</div>
+            <ul>
+                <li>Developed and maintained a centralized SQL database for student enrollment and academic performance tracking.</li>
+                <li>Conducted deep-dive analyses into graduation rates to identify factors impacting student success.</li>
+                <li>Produced comprehensive statistical reports for annual institutional accreditation audits.</li>
+                <li>Trained administrative staff on data entry best practices to improve database integrity.</li>
+            </ul>
+            <div class="outcome-highlight">Key Outcome: Mitigated systematic data entry errors by 35% through the implementation of real-time validation protocols.</div>
         </div>
     </section>
 
@@ -234,12 +235,12 @@
                 <span class="exp-title">Master of Science (ICT) | University of the Sunshine Coast</span>
                 <span class="exp-date">Expected 2026</span>
             </div>
-            <p><strong>Current Coursework:</strong> Advanced Data Science, Systems Analysis, and Cybersecurity.</p>
+            <p><strong>Focus Areas:</strong> Advanced Data Science, Systems Analysis, and Cybersecurity. Currently applying theoretical knowledge to real-world cloud data architecture.</p>
         </div>
 
         <div class="experience-item">
             <div class="exp-header">
-                <span class="exp-title">Professional Certifications</span>
+                <span class="exp-title">Professional Development</span>
             </div>
             <ul>
                 <li>Information Technology Specialist: Python Development</li>
@@ -254,26 +255,26 @@
 
         <div class="experience-item">
             <h3>Interactive Sales Performance Dashboard</h3>
-            <p>Developed a dynamic visual interface to analyze regional sales efficiency and product performance trends using Power BI.</p>
+            <p>A dynamic Power BI interface designed to analyze regional sales efficiency and product performance trends.</p>
             
             <div class="reflection-box">
                 <strong>Reflection on Learning</strong>
-                This project demonstrated that data visualization is only as good as the underlying data preparation. During development, I learned that 80% of the value comes from "cleaning" noisy data in Python before the visualization begins. I had to pivot my strategy from showing every metric to focusing on "Outlier Detection," which provided far more value to stakeholders than standard averages.
+                This project taught me that data visualization is only as good as the underlying data preparation. I learned that 80% of the value comes from "cleaning" noisy data in Python before the visualization begins. I focused on "Outlier Detection," which provided more value to stakeholders than standard averages.
             </div>
             
-            <a href="assets/sales_dashboard.pdf" target="_blank" class="btn">View Sales Documentation</a>
+            <a href="sales_dashboard.pdf" target="_blank" class="btn">View Sales Documentation</a>
         </div>
 
         <div class="experience-item">
             <h3>Demographic Research & Statistical Analysis (NBS)</h3>
-            <p>Statistical research document focusing on large-scale survey validation and demographic trends in Nigeria.</p>
+            <p>Institutional research document exported from SPSS, focusing on large-scale survey validation and demographic trends.</p>
             
             <div class="reflection-box">
                 <strong>Reflection on Learning</strong>
-                Working on this research at the National Bureau of Statistics taught me the critical importance of data integrity in large-scale quantitative studies. I learned how to apply complex sampling weights in SPSS to ensure the findings were statistically representative. The greatest challenge was communicating high-level p-values and significance tests to non-technical policy makers.
+                Working on this research at the National Bureau of Statistics taught me the critical importance of data integrity in large-scale studies. I learned how to apply complex sampling weights in SPSS to ensure findings were statistically representative and how to communicate high-level p-values to non-technical policy makers.
             </div>
             
-            <a href="assets/spss_research_report.pdf" target="_blank" class="btn">View SPSS Research Report</a>
+            <a href="spss_research_report.pdf" target="_blank" class="btn">View SPSS Research Report</a>
         </div>
     </section>
 
