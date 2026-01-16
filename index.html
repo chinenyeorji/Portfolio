@@ -35,7 +35,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         nav .nav-container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
@@ -52,7 +52,7 @@
         nav a:hover { color: var(--accent-blue); }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 40px;
             background: var(--text-light);
@@ -88,13 +88,25 @@
             margin-top: 50px;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+        .cert-grid {
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
             margin-top: 20px;
         }
-        .skill-category h4 { margin: 0 0 10px 0; color: var(--accent-blue); font-size: 1.1rem; }
+        .cert-item {
+            border: 1px solid var(--border-color); 
+            padding: 15px; 
+            text-align: center; 
+            border-radius: 4px; 
+            background: white;
+        }
+        .cert-item img {
+            width: 100%; 
+            height: 150px; 
+            object-fit: contain; 
+            margin-bottom: 10px;
+        }
 
         .experience-item { margin-bottom: 35px; }
         .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
@@ -136,7 +148,7 @@
 
         @media (max-width: 768px) {
             header { flex-direction: column; text-align: center; }
-            .contact-grid, .skills-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
             .exp-header { flex-direction: column; }
         }
     </style>
@@ -146,9 +158,10 @@
 <nav>
     <div class="nav-container">
         <a href="#about">Profile</a>
-        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certs</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Work Samples</a>
+        <a href="#projects">Projects</a>
     </div>
 </nav>
 
@@ -170,64 +183,8 @@
     <section>
         <h2>Professional Summary</h2>
         <p>
-            An results-driven Data Analyst with extensive experience in institutional research and statistical reporting. I leverage specialised expertise in <strong>Python, R, and Power BI</strong> to transform large datasets into actionable strategic intelligence. My background in the public sector has cultivated a rigorous approach to data integrity, quantitative analysis, and stakeholder communication.
+            An results-driven Data Analyst with over 8 years of institutional experience. I specialise in <strong>Python, R, and Power BI</strong> to transform complex datasets into strategic intelligence. My background in the public sector has cultivated a rigorous approach to data integrity and governance, complemented by modern cybersecurity and cloud compliance certifications.
         </p>
-    </section>
-
-    <section id="skills">
-        <h2>Technical Core Competencies</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h4>Statistical & Programming</h4>
-                <ul>
-                    <li>Python (IT Specialist Certified)</li>
-                    <li>Statistical Modelling (SPSS, SAS, R)</li>
-                    <li>SQL Database Development</li>
-                    <li>Advanced Microsoft Excel (VBA/Macros)</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h4>Visualisation & Reporting</h4>
-                <ul>
-                    <li>Power BI & Tableau Dashboarding</li>
-                    <li>Survey Design (KoBoToolbox, SPSS)</li>
-                    <li>Technical Documentation</li>
-                    <li>Data Cleansing & ETL Processes</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Professional Experience</h2>
-        
-        <div class="experience-item">
-            <div class="exp-header">
-                <span class="exp-title">Data Analyst | National Bureau of Statistics</span>
-                <span class="exp-date">2016 – 2018</span>
-            </div>
-            <ul>
-                <li>Managed end-to-end data cleaning and multi-level validation for national demographic surveys using Python and SPSS.</li>
-                <li>Conducted sophisticated correlation analysis and trend forecasting to produce data for national statistical bulletins.</li>
-                <li>Collaborated with inter-departmental government ministries to simplify complex quantitative abstracts for policy makers.</li>
-                <li>Oversaw field data collection quality assurance, ensuring strict adherence to global statistical standards.</li>
-            </ul>
-            <div class="outcome-highlight">Key Outcome: Developed automated Excel VBA templates that reduced monthly report generation time by 40%.</div>
-        </div>
-
-        <div class="experience-item">
-            <div class="exp-header">
-                <span class="exp-title">Data Analyst | Nigerian College of Aviation Technology</span>
-                <span class="exp-date">2015 – 2016</span>
-            </div>
-            <ul>
-                <li>Engineered a centralised SQL database to track student enrolment, academic progression, and graduation metrics.</li>
-                <li>Performed exploratory data analysis (EDA) to identify key socio-economic factors influencing student success rates.</li>
-                <li>Authored technical statistical reports for annual institutional accreditation audits to ensure compliance.</li>
-                <li>Trained cross-functional administrative teams on data entry protocols to minimise database corruption.</li>
-            </ul>
-            <div class="outcome-highlight">Key Outcome: Implemented real-time validation checks that reduced database entry errors by 35%.</div>
-        </div>
     </section>
 
     <section id="education">
@@ -237,18 +194,44 @@
                 <span class="exp-title">Master of Science (ICT) | University of the Sunshine Coast</span>
                 <span class="exp-date">Expected 2026</span>
             </div>
-            <p>Focusing on Advanced Data Science, Machine Learning, and Cybersecurity. Bridging institutional statistical experience with modern cloud-based analytics.</p>
+            <p>Focusing on Advanced Data Science, Machine Learning, and Cybersecurity.</p>
         </div>
+    </section>
 
+    <section id="certifications">
+        <h2>Academic & Professional Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-item">
+                <img src="assets/bsc_degree_thumb.jpg" alt="BSc Degree">
+                <p style="font-size: 0.85rem;"><strong>BSc Degree</strong><br>Graduation Certificate</p>
+            </div>
+            <div class="cert-item">
+                <img src="assets/microsoft_cert_thumb.jpg" alt="Microsoft SC-900">
+                <p style="font-size: 0.85rem;"><strong>Microsoft Certified</strong><br>Security & Compliance</p>
+            </div>
+            <div class="cert-item">
+                <img src="assets/python_cert_thumb.jpg" alt="IT Specialist Python">
+                <p style="font-size: 0.85rem;"><strong>IT Specialist</strong><br>Python Programming</p>
+            </div>
+            <div class="cert-item">
+                <img src="assets/fortinet_cert_thumb.jpg" alt="Fortinet NSE">
+                <p style="font-size: 0.85rem;"><strong>Fortinet Certified</strong><br>Cybersecurity Fundamentals</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
         <div class="experience-item">
             <div class="exp-header">
-                <span class="exp-title">Professional Certifications</span>
+                <span class="exp-title">Data Analyst | National Bureau of Statistics</span>
+                <span class="exp-date">2016 – 2018</span>
             </div>
             <ul>
-                <li>IT Specialist: Python (Certified)</li>
-                <li>Microsoft Certified: Security & Compliance Fundamentals</li>
-                <li>Fortinet Certified: Cybersecurity Fundamentals</li>
+                <li>Managed end-to-end data cleansing and validation for national surveys using Python and SPSS.</li>
+                <li>Conducted correlation analysis to produce data for national statistical bulletins.</li>
             </ul>
+            <div class="outcome-highlight">Key Outcome: Automated Excel VBA templates reduced monthly report time by 40%.</div>
         </div>
     </section>
 
@@ -257,45 +240,54 @@
 
         <div class="experience-item">
             <h3>Telco Customer Churn Prediction (Machine Learning)</h3>
-            <p>Developed a binary classification model using Logistic Regression to predict customer retention for a telecommunications provider.</p>
+            <p>Binary classification model using Logistic Regression to predict customer retention.</p>
             <div class="reflection-box">
-                <strong>Reflection on Learning</strong>
-                This project emphasised the importance of feature scaling and encoding. I learned that using <strong>StandardScaler</strong> is crucial for model convergence in Logistic Regression. Most importantly, I realised that while accuracy is a good metric, "Recall" is often the priority in business churn scenarios to avoid missing at-risk customers.
+                <strong>Reflection</strong>
+                This project emphasised the importance of feature scaling. I learned that for churn models, <strong>Recall</strong> is often more critical than accuracy to ensure at-risk customers are not missed.
             </div>
-            <a href="customer_churn_prediction.pdf" target="_blank" class="btn">View Machine Learning Report</a>
+            <a href="customer_churn_prediction.pdf" target="_blank" class="btn">View ML Report</a>
         </div>
 
         <div class="experience-item">
-            <h3>Automated NBS Survey Cleaning Pipeline (Python)</h3>
-            <p>Created a Python script to automate the cleaning of disparate survey data, handling inconsistent LGA names and currency formats.</p>
+            <h3>Institutional Data Analysis (SQL)</h3>
+            <p>Two-task analytical audit of student success and resource capacity at NCAT.</p>
             <div class="reflection-box">
-                <strong>Reflection on Learning</strong>
-                Working on this script taught me that the most valuable part of a data analyst's work happens during the "Extract and Transform" phase. I mastered the use of <strong>Pandas</strong> to programmatically resolve data integrity issues that would take days to fix manually through standardisation.
+                <strong>Reflection</strong>
+                I learned to use <strong>CASE statements</strong> to create traffic-light warning systems for over-capacity courses, proving that SQL is a vital tool for operational resource planning.
             </div>
-            <a href="python_etl_documentation.pdf" target="_blank" class="btn">View Technical Documentation</a>
+            <a href="ncat_sql_analysis.pdf" target="_blank" class="btn">View SQL Analysis</a>
+        </div>
+
+        <div class="experience-item">
+            <h3>Automated Survey Cleaning Pipeline (Python)</h3>
+            <p>Python/Pandas script to automate the standardisation of inconsistent national survey data.</p>
+            <div class="reflection-box">
+                <strong>Reflection</strong>
+                I mastered programmatic data cleaning, resolving integrity issues that would take days to fix manually.
+            </div>
+            <a href="python_etl_documentation.pdf" target="_blank" class="btn">View Technical Docs</a>
         </div>
 
         <div class="experience-item">
             <h3>Regional Sales Performance Dashboard (Power BI)</h3>
-            <p>A dynamic visualisation project designed to track regional KPIs and identify sales outliers for strategic decision-making.</p>
+            <p>Dynamic visualisation focusing on KPI tracking and outlier detection.</p>
             <div class="reflection-box">
-                <strong>Reflection on Learning</strong>
-                I learned that effective dashboards should lead with insights, not just numbers. By implementing "Outlier Detection," I helped stakeholders focus on specific problem areas rather than getting lost in general averages. This project improved my skills in DAX and data modelling.
+                <strong>Reflection</strong>
+                I learned to design dashboards that lead with insights. Implementing outlier detection helps stakeholders focus on problem areas immediately.
             </div>
-            <a href="sales_dashboard.pdf" target="_blank" class="btn">View Sales Documentation</a>
+            <a href="sales_dashboard.pdf" target="_blank" class="btn">View Dashboard Report</a>
         </div>
 
         <div class="experience-item">
-            <h3>Institutional Research & Statistical Analysis (SPSS)</h3>
-            <p>An export of professional demographic research conducted for the NBS, utilising complex sampling weights and correlation tests.</p>
+            <h3>Institutional Research & Statistics (SPSS)</h3>
+            <p>Demographic research utilizing complex sampling weights and correlation tests.</p>
             <div class="reflection-box">
-                <strong>Reflection on Learning</strong>
-                This project taught me how to ensure statistical representativity in large-scale studies. I learned how to apply and explain complex p-values and confidence intervals to non-technical executive stakeholders, bridging the gap between maths and policy.
+                <strong>Reflection</strong>
+                This project taught me how to explain complex p-values to non-technical stakeholders, bridging the gap between maths and policy.
             </div>
-            <a href="spss_research_report.pdf" target="_blank" class="btn">View SPSS Research Report</a>
+            <a href="spss_research_report.pdf" target="_blank" class="btn">View SPSS Report</a>
         </div>
     </section>
-
 </div>
 
 </body>
