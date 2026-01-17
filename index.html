@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chinenye J. Orji | Professional Data Analyst Portfolio</title>
+    <title>Chinenye J. Orji | Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -24,7 +24,7 @@
             margin: 0;
             background-color: var(--bg-light);
             color: var(--text-dark);
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         nav {
@@ -43,8 +43,8 @@
             align-items: center;
             padding: 0 20px;
         }
-        .nav-logo { color: white; font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; }
-        .nav-links { display: flex; gap: 30px; }
+        .nav-logo { color: white; font-weight: 700; font-size: 1.1rem; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 25px; }
         nav a {
             color: var(--text-light);
             text-decoration: none;
@@ -52,12 +52,11 @@
             font-size: 0.85rem;
             text-transform: uppercase;
         }
-        nav a:hover { color: var(--accent-blue); }
 
         .container {
             max-width: 1100px;
-            margin: 50px auto;
-            padding: 60px;
+            margin: 40px auto;
+            padding: 50px;
             background: var(--text-light);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border-radius: 8px;
@@ -66,122 +65,109 @@
         header {
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 40px;
             padding-bottom: 40px;
             border-bottom: 3px solid var(--primary-navy);
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 180px;
+            height: 180px;
             border-radius: 8px;
             object-fit: cover;
-            border: 4px solid var(--bg-light);
+            border: 4px solid #fff;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .header-text h1 { margin: 0; font-size: 3rem; color: var(--primary-navy); }
-        .tagline { color: var(--accent-blue); font-weight: 700; font-size: 1.3rem; margin: 10px 0 20px 0; }
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.95rem; }
+        .header-text h1 { margin: 0; font-size: 2.8rem; color: var(--primary-navy); }
+        .tagline { color: var(--accent-blue); font-weight: 700; font-size: 1.2rem; margin: 10px 0 15px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.9rem; }
 
         h2 { 
             color: var(--primary-navy); 
-            font-size: 2rem; 
-            margin-top: 60px;
-            margin-bottom: 25px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            font-size: 1.8rem; 
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 10px;
         }
-        h2::after { content: ""; flex: 1; height: 2px; background: var(--border-color); }
 
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background: #f9f9f9;
-            padding: 30px;
+            gap: 30px;
+            background: #fdfdfd;
+            padding: 25px;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
-            margin-bottom: 40px;
         }
-        .skill-category h4 { margin: 0 0 15px 0; color: var(--accent-blue); font-size: 1.2rem; text-transform: uppercase; }
+        .skill-category h4 { margin: 0 0 10px 0; color: var(--accent-blue); text-transform: uppercase; font-size: 0.9rem; }
+        .skill-category ul { padding-left: 18px; margin: 0; font-size: 0.95rem; }
 
         .cert-grid {
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
-            gap: 25px; 
-            margin: 40px 0;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+            gap: 20px; 
+            margin: 30px 0;
         }
         .cert-item {
             border: 1px solid var(--border-color); 
-            padding: 25px; 
+            padding: 20px; 
             text-align: center; 
-            border-radius: 12px; 
-            background: white;
-            transition: all 0.3s ease;
+            border-radius: 8px;
+            transition: 0.3s;
         }
-        .cert-item:hover { transform: translateY(-8px); border-color: var(--accent-blue); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .cert-item img {
-            width: 100%; 
-            height: 200px; 
-            object-fit: contain; 
-            margin-bottom: 20px;
-            background: #fcfcfc;
-        }
-        .cert-icon { font-size: 60px; display: block; margin-bottom: 15px; }
+        .cert-item:hover { border-color: var(--accent-blue); background: #fafafa; }
+        .cert-img { width: 100%; height: 160px; object-fit: contain; margin-bottom: 15px; border: 1px solid #eee; }
+        .cert-icon { font-size: 50px; display: block; margin-bottom: 10px; }
 
-        .experience-item { margin-bottom: 50px; }
-        .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 15px; }
-        .exp-title { font-weight: 700; font-size: 1.3rem; color: var(--primary-navy); }
-        .exp-date { font-weight: 600; color: var(--accent-blue); background: #e0f4f9; padding: 2px 12px; border-radius: 20px; font-size: 0.85rem; }
+        .experience-item { margin-bottom: 40px; }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+        .exp-title { font-weight: 700; font-size: 1.2rem; color: var(--primary-navy); }
+        .exp-date { font-weight: 600; color: #666; font-size: 0.85rem; }
         
         .outcome-highlight { 
             color: #1b5e20; 
             font-weight: 600; 
             background: #e8f5e9; 
-            padding: 15px 20px; 
-            border-left: 5px solid #2e7d32;
-            margin: 20px 0;
-            border-radius: 0 4px 4px 0;
+            padding: 12px 18px; 
+            border-left: 4px solid #2e7d32;
+            margin: 15px 0;
+            font-size: 0.95rem;
         }
 
         .reflection-box {
             background: var(--reflection-bg);
             border-left: 5px solid #f1c40f;
-            padding: 25px;
-            margin: 25px 0;
-            border-radius: 0 8px 8px 0;
+            padding: 20px;
+            margin: 20px 0;
+            font-size: 0.95rem;
         }
-        .reflection-box strong { display: block; margin-bottom: 10px; color: #856404; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1.5px; }
+        .reflection-box strong { display: block; margin-bottom: 8px; color: #856404; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
 
         .btn {
             display: inline-block;
             background: var(--primary-navy);
             color: white;
-            padding: 14px 28px;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 4px;
             font-weight: 600;
+            font-size: 0.9rem;
             transition: 0.3s;
-            cursor: pointer;
         }
         .btn:hover { background: var(--accent-blue); }
-        .btn-small { padding: 10px 20px; font-size: 0.85rem; background: var(--accent-blue); margin-top: 15px; }
-
-        @media (max-width: 768px) {
-            header { flex-direction: column; text-align: center; }
-            .contact-grid, .skills-grid { grid-template-columns: 1fr; }
-        }
+        .btn-small { padding: 8px 16px; font-size: 0.8rem; background: var(--accent-blue); margin-top: 10px; }
     </style>
 </head>
 <body>
 
 <nav>
     <div class="nav-container">
-        <div class="nav-logo">CHINENYE ORJI | DATA ANALYST</div>
+        <div class="nav-logo">CHINENYE J. ORJI | PORTFOLIO</div>
         <div class="nav-links">
-            <a href="#about">About</a>
+            <a href="#about">Profile</a>
             <a href="#skills">Skills</a>
-            <a href="#certifications">Verification</a>
+            <a href="#certifications">Certifications</a>
             <a href="#experience">History</a>
             <a href="#projects">Work Samples</a>
         </div>
@@ -193,38 +179,38 @@
         <img src="assets/profile.jpg" alt="Chinenye Orji" class="profile-img">
         <div class="header-text">
             <h1>Chinenye J. Orji</h1>
-            <div class="tagline">Senior Data Analyst | Statistical Research Specialist</div>
+            <div class="tagline">Data Analyst & ICT Professional</div>
             <div class="contact-grid">
                 <div><strong>Email:</strong> jenniferudenweze@gmail.com</div>
-                <div><strong>Location:</strong> Coomera, Queensland, AU</div>
-                <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/chinenye-jennifer-orji-270283399" target="_blank">Professional Profile</a></div>
-                <div><strong>Phone:</strong> +61 414 972 072</div>
+                <div><strong>Location:</strong> Coomera, Australia [cite: 3, 5]</div>
+                <div><strong>LinkedIn:</strong> <a href="https://tinyurl.com/ypjc238y" target="_blank">View Profile</a> [cite: 7]</div>
+                <div><strong>Phone:</strong> +61 414 972 072 [cite: 4]</div>
             </div>
         </div>
     </header>
 
     <section>
-        <h2>Executive Summary</h2>
+        <h2>Professional Summary</h2>
         <p>
-            Accomplished Data Analyst with over 8 years of institutional experience. I specialise in using <strong>Python, SQL, and Power BI</strong> to transform complex datasets into strategic intelligence. My career in the public sector involved managing national-level data pipelines for the National Bureau of Statistics, ensuring the highest standards of data integrity and governance. I am currently bridging this experience with modern cloud security and machine learning through a <strong>Master of Science (ICT)</strong> at USC.
+            Results-driven Data Analyst and ICT professional with over nine years' experience delivering statistical insights, reporting solutions, and evidence-based analytics across government and education sectors[cite: 29]. Highly skilled in translating complex datasets into meaningful insights that support policy development, planning, and organisational improvement[cite: 30]. Currently completing a Master's in ICT, with strengths in data visualisation, database management, and analytical storytelling[cite: 31].
         </p>
     </section>
 
     <section id="education">
-        <h2>Academic Foundation</h2>
+        <h2>Education</h2>
         <div class="experience-item">
             <div class="exp-header">
-                <span class="exp-title">Master of Science (ICT) | University of the Sunshine Coast</span>
-                <span class="exp-date">Expected 2026</span>
+                <span class="exp-title">Master of Science (M.Sc.): Information Communication and Technology</span>
+                <span class="exp-date">Expected 01/2026</span>
             </div>
-            <p>Focusing on Advanced Data Science, Machine Learning, and Enterprise Security Compliance.</p>
+            <p>University of the Sunshine Coast - Queensland, Australia [cite: 64, 66, 67]</p>
         </div>
         <div class="experience-item">
             <div class="exp-header">
-                <span class="exp-title">Bachelor of Science | University Level</span>
-                <span class="exp-date">Graduated</span>
+                <span class="exp-title">Bachelor of Science (B.Sc.): Statistics & Computer Science</span>
+                <span class="exp-date">Graduated 2014</span>
             </div>
-            <p>Core focus on quantitative research methodologies and statistical analysis.</p>
+            <p>University of Agriculture - Makurdi, Nigeria [cite: 68, 69]</p>
         </div>
     </section>
 
@@ -232,83 +218,80 @@
         <h2>Technical Core Competencies</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h4>Data Science & Programming</h4>
+                <h4>Analysis & Programming</h4>
                 <ul>
-                    <li>Python (Pandas, Scikit-learn)</li>
-                    <li>SQL Engineering & CTEs</li>
-                    <li>Statistical Modelling (SPSS, R)</li>
-                    <li>Excel VBA & ETL Automation</li>
+                    <li>Statistical Analysis (SPSS, R, SAS) [cite: 10]</li>
+                    <li>Python Automation (Pandas) [cite: 11, 46]</li>
+                    <li>SQL Database Management (MySQL) [cite: 12, 14]</li>
+                    <li>Advanced Excel (Macros, VBA, Pivot Tables) [cite: 16, 17]</li>
                 </ul>
             </div>
             <div class="skill-category">
-                <h4>Governance & Visualization</h4>
+                <h4>Visualization & Governance</h4>
                 <ul>
-                    <li>Power BI (DAX) & Tableau</li>
-                    <li>Cloud Security (Microsoft SC-900)</li>
-                    <li>Survey Validation Protocols</li>
-                    <li>Institutional Reporting</li>
+                    <li>Power BI & Tableau Dashboarding [cite: 13]</li>
+                    <li>Survey Design (KoBoToolbox, SurveyMonkey) [cite: 20, 26]</li>
+                    <li>Technical Documentation & Storytelling [cite: 22]</li>
+                    <li>Security & Compliance Fundamentals </li>
                 </ul>
             </div>
         </div>
     </section>
 
     <section id="certifications">
-        <h2>Professional Credentials & Verification</h2>
-        <p>Below is the verified documentation for my academic degree and industry certifications.</p>
+        <h2>Certifications & Verification</h2>
         <div class="cert-grid">
             <div class="cert-item">
-                <img src="assets/bsc_degree.jpeg" alt="BSc Degree">
-                <p><strong>BSc Degree Certificate</strong><br>University Graduation</p>
-                <a href="assets/bsc_degree.jpeg" target="_blank" class="btn btn-small">View Full Image</a>
+                <img src="assets/bsc_degree.jpeg" alt="BSc Certificate" class="cert-img">
+                <p><strong>BSc Degree</strong><br>Statistics & Computer Science </p>
+                <a href="assets/bsc_degree.jpeg" target="_blank" class="btn btn-small">View Certificate</a>
             </div>
-
-            <div class="cert-item">
-                <span class="cert-icon">☁️</span>
-                <p><strong>Microsoft Certified</strong><br>Security & Compliance (SC-900)</p>
-                <a href="assets/microsoft_cert_thumb.pdf" target="_blank" class="btn btn-small">View PDF Certificate</a>
-            </div>
-
-            <div class="cert-item">
-                <span class="cert-icon">🐍</span>
-                <p><strong>IT Specialist</strong><br>Python Programming</p>
-                <a href="assets/python_cert.pdf" target="_blank" class="btn btn-small">View PDF Certificate</a>
-            </div>
-
             <div class="cert-item">
                 <span class="cert-icon">🛡️</span>
-                <p><strong>Fortinet Certified</strong><br>Cybersecurity Fundamentals</p>
-                <a href="assets/fortinet_cert_thumb.pdf" target="_blank" class="btn btn-small">View PDF Certificate</a>
+                <p><strong>Microsoft Certified</strong><br>Security Fundamentals (2025) </p>
+                <a href="assets/microsoft_cert_thumb.pdf" target="_blank" class="btn btn-small">View PDF</a>
+            </div>
+            <div class="cert-item">
+                <span class="cert-icon">🐍</span>
+                <p><strong>IT Specialist</strong><br>Python Programming (2025) </p>
+                <a href="assets/python_cert.pdf" target="_blank" class="btn btn-small">View PDF</a>
+            </div>
+            <div class="cert-item">
+                <span class="cert-icon">🛡️</span>
+                <p><strong>Fortinet Certified</strong><br>Cybersecurity Fundamentals (2025) </p>
+                <a href="assets/fortinet_cert_thumb.pdf" target="_blank" class="btn btn-small">View PDF</a>
             </div>
         </div>
     </section>
 
     <section id="experience">
-        <h2>Professional Career History</h2>
+        <h2>Professional Experience</h2>
         
         <div class="experience-item">
             <div class="exp-header">
-                <span class="exp-title">Data Analyst | National Bureau of Statistics (NBS)</span>
-                <span class="exp-date">2016 – 2018</span>
+                <span class="exp-title">Data Analyst | National Bureau of Statistics</span>
+                <span class="exp-date">01/2016 – 01/2018</span>
             </div>
             <ul>
-                <li>Managed national survey data cleaning and multi-level validation using Python and SPSS.</li>
-                <li>Produced correlation analyses for national demographic statistical bulletins.</li>
-                <li>Developed VBA tools that standardised monthly reporting for 30+ regional offices.</li>
+                <li>Processed household datasets (5,000+ respondents), increasing state-level reporting accuracy[cite: 36, 37, 38].</li>
+                <li>Designed automated Excel VBA templates reducing reporting time by 40%[cite: 39, 40, 48].</li>
+                <li>Developed a Python (Pandas) ETL pipeline, increasing processing speed by 55%.</li>
+                <li>Trained 35 staff in SPSS and best-practice database management[cite: 45].</li>
             </ul>
-            <div class="outcome-highlight">Key Outcome: Automated data cleaning pipelines reduced manual processing time by over 40%.</div>
+            <div class="outcome-highlight">Key Impact: Designing a SQL-based validation system reduced entry errors by 35%[cite: 49].</div>
         </div>
 
         <div class="experience-item">
             <div class="exp-header">
-                <span class="exp-title">Data Analyst | Nigerian College of Aviation Technology (NCAT)</span>
-                <span class="exp-date">2015 – 2016</span>
+                <span class="exp-title">Data Analyst | Nigerian College of Aviation Technology</span>
+                <span class="exp-date">01/2015 – 01/2016</span>
             </div>
             <ul>
-                <li>Designed a centralised SQL database to track student progression and graduation metrics.</li>
-                <li>Conducted exploratory data analysis (EDA) to identify factors influencing student success rates.</li>
-                <li>Produced technical abstracts for annual accreditation and regulatory audits.</li>
+                <li>Developed a student performance tracking system adopted across five academic departments.</li>
+                <li>Reduced data-entry errors by 35% through structured reporting workflows[cite: 57].</li>
+                <li>Produced analytics on enrolment trends and graduation outcomes to inform curriculum.</li>
             </ul>
-            <div class="outcome-highlight">Key Outcome: Implemented real-time validation checks that reduced database entry errors by 35%.</div>
+            <div class="outcome-highlight">Key Impact: Supported regulatory accreditation by providing accurate regulatory datasets[cite: 60, 61].</div>
         </div>
     </section>
 
@@ -316,53 +299,43 @@
         <h2>Technical Work Samples & Reflections</h2>
 
         <div class="experience-item">
-            <h3>1. Institutional Intelligence: Dual-Task SQL Analysis</h3>
-            <p>Querying the NCAT student information system to identify factors influencing graduation timelines and academic success.</p>
+            <h3>Institutional Data Audit: NCAT SQL Analysis</h3>
+            <p>A dual-task analysis auditing student performance tracking and institutional resource capacity[cite: 55, 58].</p>
             <div class="reflection-box">
-                <strong>Academic Reflection</strong>
-                This project demonstrated my ability to use <strong>CASE statements</strong> to generate "Traffic Light" warning systems for administrative users, providing actionable insights for resource allocation.
+                <strong>Project Reflection</strong>
+                This analysis allowed me to bridge database management with educational strategy. By auditing student success rates and mapping them against departmental resource capacity, I learned how to use data to identify curriculum gaps. The implementation of structured SQL validation proved that reducing data noise at the entry point is the most effective way to improve long-term reporting accuracy[cite: 57].
             </div>
-            <a href="ncat_sql_analysis.pdf" target="_blank" class="btn">View SQL Report</a>
+            <a href="ncat_sql_analysis.pdf" target="_blank" class="btn">View Technical Report</a>
         </div>
 
         <div class="experience-item">
-            <h3>2. Predictive Analytics: Telco Customer Churn Modelling</h3>
-            <p>Using Logistic Regression to predict customer attrition based on usage patterns and demographic data.</p>
+            <h3>Automated LGA Survey Pipeline (Python)</h3>
+            <p>Development of an ETL pipeline using Python/Pandas to process local government survey data.</p>
             <div class="reflection-box">
-                <strong>Academic Reflection</strong>
-                I learned that in business churn contexts, <strong>Recall</strong> is more critical than accuracy. Missing an at-risk customer is more costly than a false alarm.
+                <strong>Project Reflection</strong>
+                The 55% increase in processing speed achieved through this pipeline demonstrated the power of automation over manual cleaning. It taught me to build scalable scripts that handle disparate data formats while maintaining absolute integrity[cite: 44].
             </div>
-            <a href="customer_churn_prediction.pdf" target="_blank" class="btn">View ML Project</a>
+            <a href="python_etl_documentation.pdf" target="_blank" class="btn">View Documentation</a>
         </div>
 
         <div class="experience-item">
-            <h3>3. Data Engineering: Automated ETL Pipeline</h3>
-            <p>Python script developed to standardise and clean inconsistent LGA and currency data from national surveys.</p>
+            <h3>National Demographic Report (SPSS)</h3>
+            <p>Authoring state-level demographic reports using complex sampling weights for policy accuracy[cite: 37, 47].</p>
             <div class="reflection-box">
-                <strong>Academic Reflection</strong>
-                Mastered the <strong>Pandas library</strong> to resolve integrity issues, reinforcing the principle that data preparation is the foundation of reliable analysis.
+                <strong>Project Reflection</strong>
+                Processing data for over 5,000 respondents required rigorous quality assurance[cite: 37, 44]. This project sharpened my ability to translate complex quantitative findings into summaries accessible to government stakeholders[cite: 50].
             </div>
-            <a href="python_etl_documentation.pdf" target="_blank" class="btn">View ETL Docs</a>
+            <a href="spss_research_report.pdf" target="_blank" class="btn">View Statistical Abstract</a>
         </div>
 
         <div class="experience-item">
-            <h3>4. Business Intelligence: Regional Sales Dashboard</h3>
-            <p>A Power BI visualization project focusing on KPI tracking and automated outlier detection.</p>
+            <h3>Interactive Economic Indicator Dashboard</h3>
+            <p>Design of dashboards to monitor socioeconomic indicators and institutional health[cite: 42, 80].</p>
             <div class="reflection-box">
-                <strong>Academic Reflection</strong>
-                I learned to design dashboards that lead with insights. Implementing outlier detection helps stakeholders focus on critical problem areas immediately.
+                <strong>Project Reflection</strong>
+                Using Power BI, I learned that storytelling is the most important part of visualization[cite: 22]. The goal was not just to show numbers, but to enable evidence-based decision-making for executive leadership[cite: 42].
             </div>
-            <a href="sales_dashboard.pdf" target="_blank" class="btn">View Dashboard</a>
-        </div>
-
-        <div class="experience-item">
-            <h3>5. Statistical Research: National Demographic Abstract</h3>
-            <p>SPSS research utilizing complex sampling weights and correlation testing on national survey data.</p>
-            <div class="reflection-box">
-                <strong>Academic Reflection</strong>
-                This project taught me how to ensure statistical representativity and how to explain complex p-values to non-technical policy makers.
-            </div>
-            <a href="spss_research_report.pdf" target="_blank" class="btn">View Statistical Report</a>
+            <a href="sales_dashboard.pdf" target="_blank" class="btn">View Dashboard Sample</a>
         </div>
     </section>
 </div>
